@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="a ≔ 0" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="r≔b" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.seesContext name="(" org.eventb.core.target="IntDiv_c0"/>
+    <org.eventb.core.variable name=")" org.eventb.core.identifier="a"/>
+    <org.eventb.core.variable name="*" org.eventb.core.identifier="r"/>
+    <org.eventb.core.invariant name="+" org.eventb.core.label="inv1" org.eventb.core.predicate="a ∈ ℕ"/>
+    <org.eventb.core.invariant name="," org.eventb.core.label="inv2" org.eventb.core.predicate="r ∈ ℕ"/>
+    <org.eventb.core.event name="-" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="Progress">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="r ≥ c"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="a ≔ a+1" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="r ≔ r−c" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.invariant name="." org.eventb.core.label="inv3" org.eventb.core.predicate="b = r + c ∗ a"/>
+    <org.eventb.core.variant name="/" org.eventb.core.expression="r" org.eventb.core.label="vrn1"/>
+</org.eventb.core.machineFile>
