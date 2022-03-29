@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="'" org.eventb.core.comment="Size of the array" org.eventb.core.identifier="n"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="(" org.eventb.core.comment="The array modeld as a function" org.eventb.core.identifier="f"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name=")" org.eventb.core.comment="The element we want to locate in the array" org.eventb.core.identifier="v"/>
+    <org.eventb.core.axiom name="," org.eventb.core.comment="Array of naturals" org.eventb.core.label="axm3" org.eventb.core.predicate="f ∈ 1‥n → ℕ"/>
+    <org.eventb.core.axiom name="-" org.eventb.core.comment="One element in the array" org.eventb.core.label="axm4" org.eventb.core.predicate="v ∈ ran(f)"/>
+    <org.eventb.core.axiom name="." org.eventb.core.comment="This array cannot have size zero" org.eventb.core.label="axm5" org.eventb.core.predicate="n &gt; 0"/>
+</org.eventb.core.contextFile>

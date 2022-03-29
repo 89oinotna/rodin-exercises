@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+    <org.eventb.core.psStatus name="Progress_inc/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Progress_inc/act2/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="5" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="Progress_dec/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Progress_dec/act2/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="3" org.eventb.core.psManual="true"/>
+</org.eventb.core.psFile>

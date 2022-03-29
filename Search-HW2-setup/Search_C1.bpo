@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="5">
+        <org.eventb.core.poIdentifier name="f" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+        <org.eventb.core.poIdentifier name="n" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="v" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poPredicate name="w" org.eventb.core.predicate="f∈1 ‥ n → ℕ" org.eventb.core.source="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.axiom#,"/>
+        <org.eventb.core.poPredicate name="x" org.eventb.core.predicate="v∈ran(f)" org.eventb.core.source="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.axiom#-"/>
+        <org.eventb.core.poPredicate name="y" org.eventb.core.predicate="n&gt;0" org.eventb.core.source="/Search-HW2-setup/Search_C0.buc|org.eventb.core.contextFile#Search_C0|org.eventb.core.axiom#."/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="axm1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="5">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search-HW2-setup/Search_C1.bpo|org.eventb.core.poFile#Search_C1|org.eventb.core.poPredicateSet#ABSHYP"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i⦂ℤ,j⦂ℤ·i∈1 ‥ n∧j∈1 ‥ n∧i≤j⇒i∈dom(f)∧f∈ℤ ⇸ ℤ∧j∈dom(f)" org.eventb.core.source="/Search-HW2-setup/Search_C1.buc|org.eventb.core.contextFile#Search_C1|org.eventb.core.axiom#("/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search-HW2-setup/Search_C1.buc|org.eventb.core.contextFile#Search_C1|org.eventb.core.axiom#("/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Search-HW2-setup/Search_C1.bpo|org.eventb.core.poFile#Search_C1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Search-HW2-setup/Search_C1.bpo|org.eventb.core.poFile#Search_C1|org.eventb.core.poPredicateSet#ABSHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Search-HW2-setup/Search_C1.bpo|org.eventb.core.poFile#Search_C1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="5">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="∀i⦂ℤ,j⦂ℤ·i∈1 ‥ n∧j∈1 ‥ n∧i≤j⇒f(i)≤f(j)" org.eventb.core.source="/Search-HW2-setup/Search_C1.buc|org.eventb.core.contextFile#Search_C1|org.eventb.core.axiom#("/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="r :∈ 1‥n" org.eventb.core.comment="Choose any element to start with" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name=")" org.eventb.core.comment="Position where the element v will be located" org.eventb.core.identifier="r"/>
+    <org.eventb.core.invariant name="*" org.eventb.core.comment="We require it will always be inside the array bounds" org.eventb.core.label="inv1" org.eventb.core.predicate="r ∈ 1‥n"/>
+    <org.eventb.core.seesContext name="," org.eventb.core.target="Search_C0"/>
+    <org.eventb.core.event name="-" org.eventb.core.convergence="2" org.eventb.core.extended="false" org.eventb.core.label="Progress">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="f(r) ≠ v"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="r :∈ 1‥n" org.eventb.core.comment="Not found - randomly choose another element" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Finish">
+        <org.eventb.core.guard name="'" org.eventb.core.comment="Found. Nothing to do." org.eventb.core.label="grd1" org.eventb.core.predicate="f(r) = v"/>
+    </org.eventb.core.event>
+</org.eventb.core.machineFile>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.refinesMachine name="'" org.eventb.core.target="Search_bin_M1"/>
+    <org.eventb.core.seesContext name="," org.eventb.core.target="Search_C1"/>
+    <org.eventb.core.variable name=")" org.eventb.core.comment="Expected position of element v; same as in the previous model" org.eventb.core.identifier="r"/>
+    <org.eventb.core.variable name="0" org.eventb.core.comment="Left bound of the search window" org.eventb.core.identifier="p"/>
+    <org.eventb.core.variable name="1" org.eventb.core.comment="Right bound of the search window" org.eventb.core.identifier="q"/>
+    <org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+    <org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Progress_inc">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Progress_inc"/>
+        <org.eventb.core.guard name="'" org.eventb.core.comment="The element we seek is to the right of the position currently under consideration" org.eventb.core.label="grd1" org.eventb.core.predicate="f(r) &lt; v"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="p ≔ r + 1" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="r ≔ (r+1 + q) ÷ 2" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Progress_dec">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Progress_dec"/>
+        <org.eventb.core.guard name="(" org.eventb.core.comment="The element we seek is to the left of the position currently under consideration" org.eventb.core.label="grd1" org.eventb.core.predicate="f(r) &gt; v"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="q ≔ r − 1" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="r ≔ (p+r−1)÷2" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Finish">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Finish"/>
+    </org.eventb.core.event>
+</org.eventb.core.machineFile>
