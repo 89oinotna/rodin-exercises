@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+    <org.eventb.core.extendsContext name="'" org.eventb.core.target="c0"/>
+    <org.eventb.core.constant name="(" org.eventb.core.identifier="r"/>
+    <org.eventb.core.axiom name=")" org.eventb.core.label="axm1" org.eventb.core.predicate="r ∈ P"/>
+    <org.eventb.core.constant name="*" org.eventb.core.identifier="f"/>
+    <org.eventb.core.axiom name="+" org.eventb.core.label="axm2" org.eventb.core.predicate="L ⊆ P"/>
+    <org.eventb.core.axiom name="," org.eventb.core.label="axm3" org.eventb.core.predicate="f ∈ P ∖ {r} ↠ P ∖ L"/>
+    <org.eventb.core.axiom name="-" org.eventb.core.label="axm4" org.eventb.core.predicate="∀S · S ⊆ f∼[S] ⇒ S = ∅"/>
+    <org.eventb.core.constant name="." org.eventb.core.identifier="L"/>
+    <org.eventb.core.axiom name="/" org.eventb.core.label="axm5" org.eventb.core.predicate="∀S·S⊆P ∧ r∈S ∧ (∀n·n∈P∖{r} ∧ f(n) ∈ S ⇒ n∈S) ⇒ P ⊆ S"/>
+</org.eventb.core.contextFile>

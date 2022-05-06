@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.refinesMachine name="'" org.eventb.core.target="m3"/>
+    <org.eventb.core.seesContext name="(" org.eventb.core.target="c2"/>
+    <org.eventb.core.variable name=")" org.eventb.core.identifier="c"/>
+    <org.eventb.core.variable name="," org.eventb.core.identifier="d"/>
+    <org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+    <org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ascending">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ascending"/>
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="n"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="n ∈ P"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="p(n) = q(n)"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="p(n) ≔ 1 − p(n)" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="∀m·m∈f∼[{n}] ⇒ p(n) ≠ p(m)"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="descending_r">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="descending_r"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="q(r) ≠ p(r)"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="q(r) ≔ 1 − q(r)" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="descending_nr">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="descending_nr"/>
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="n"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="n ∈ P∖{r}"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="q(n) ≠ q(f(n))"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="q(n) ≔ 1−q(n)" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="1" org.eventb.core.identifier="p"/>
+    <org.eventb.core.variable name="2" org.eventb.core.identifier="q"/>
+    <org.eventb.core.invariant name="3" org.eventb.core.label="inv1" org.eventb.core.predicate="p ∈ P → {0,1}"/>
+    <org.eventb.core.invariant name="4" org.eventb.core.label="inv2" org.eventb.core.predicate="q ∈ P → {0,1}"/>
+    <org.eventb.core.invariant name="5" org.eventb.core.label="inv3" org.eventb.core.predicate="∀n·(n∈P ⇒ p(n) = parity(c(n)))"/>
+    <org.eventb.core.invariant name="6" org.eventb.core.label="inv4" org.eventb.core.predicate="∀n · (n∈P ⇒ q(n) = parity(d(n)))"/>
+</org.eventb.core.machineFile>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+    <org.eventb.core.psStatus name="inv6/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="74" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="enter/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="enter/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="enter/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="enter/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="enter/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="leave/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="leave/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="leave/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="leave/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="leave/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="p_enter/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="p_enter/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="p_enter/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="p_enter/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="p_enter/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="p_wait/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>

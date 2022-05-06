@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+    <org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/SynchTree/c0.bcc|org.eventb.core.scContextFile#c0" org.eventb.core.source="/SynchTree/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.extendsContext#'"/>
+    <org.eventb.core.scInternalContext name="c0">
+        <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="finite(P)" org.eventb.core.source="/SynchTree/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scCarrierSet name="P" org.eventb.core.source="/SynchTree/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(P)"/>
+    </org.eventb.core.scInternalContext>
+    <org.eventb.core.scAxiom name="c1" org.eventb.core.label="axm1" org.eventb.core.predicate="r∈P" org.eventb.core.source="/SynchTree/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="c2" org.eventb.core.label="axm2" org.eventb.core.predicate="L⊆P" org.eventb.core.source="/SynchTree/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="c3" org.eventb.core.label="axm3" org.eventb.core.predicate="f∈P ∖ {r} ↠ P ∖ L" org.eventb.core.source="/SynchTree/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#," org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="c4" org.eventb.core.label="axm4" org.eventb.core.predicate="∀S⦂ℙ(P)·S⊆f∼[S]⇒S=(∅ ⦂ ℙ(P))" org.eventb.core.source="/SynchTree/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#-" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="c5" org.eventb.core.label="axm5" org.eventb.core.predicate="∀S⦂ℙ(P)·S⊆P∧r∈S∧(∀n⦂P·n∈P ∖ {r}∧f(n)∈S⇒n∈S)⇒P⊆S" org.eventb.core.source="/SynchTree/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#\/" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scConstant name="L" org.eventb.core.source="/SynchTree/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.constant#." org.eventb.core.type="ℙ(P)"/>
+    <org.eventb.core.scConstant name="f" org.eventb.core.source="/SynchTree/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.constant#*" org.eventb.core.type="ℙ(P×P)"/>
+    <org.eventb.core.scConstant name="r" org.eventb.core.source="/SynchTree/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.constant#(" org.eventb.core.type="P"/>
+</org.eventb.core.scContextFile>

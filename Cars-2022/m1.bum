@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="Make the one-way bridge visible" org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.refinesMachine name="'" org.eventb.core.target="m0"/>
+    <org.eventb.core.seesContext name="+" org.eventb.core.target="C0"/>
+    <org.eventb.core.event name="," org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="a ≔ 0" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="b ≔ 0" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="c ≔ 0" org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="-" org.eventb.core.comment="Car leaves mainland, enters bridge" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ML_out">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ML_out"/>
+        <org.eventb.core.action name="'" org.eventb.core.assignment="a ≔ a + 1" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="(" org.eventb.core.comment="There is room for the car" org.eventb.core.label="grd1" org.eventb.core.predicate=" a + b &lt; d"/>
+        <org.eventb.core.guard name=")" org.eventb.core.comment="No car coming in the opposite direction" org.eventb.core.label="grd2" org.eventb.core.predicate=" c = 0"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="." org.eventb.core.comment="Car comes out of the bridge into mainland" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ML_in">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ML_in"/>
+        <org.eventb.core.action name="'" org.eventb.core.assignment="c ≔ c − 1" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="(" org.eventb.core.comment="There is a car in the bridge.&#10;Note that we do not have to specify that there is&#10;no car coming towards us, as it is implied by&#10;invariants and the previous guard." org.eventb.core.label="grd1" org.eventb.core.predicate="c &gt; 0"/>
+        <org.eventb.core.guard name=")" org.eventb.core.comment="Just for clarification. This is implied by grd1 and inv5." org.eventb.core.label="grd2" org.eventb.core.predicate="a = 0" org.eventb.core.theorem="true"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="/" org.eventb.core.identifier="a"/>
+    <org.eventb.core.variable name="0" org.eventb.core.comment="Cars in the island" org.eventb.core.identifier="b"/>
+    <org.eventb.core.variable name="1" org.eventb.core.comment="Cars on the bridge going towards mainland" org.eventb.core.identifier="c"/>
+    <org.eventb.core.invariant name="2" org.eventb.core.label="inv1" org.eventb.core.predicate="a ∈ ℕ"/>
+    <org.eventb.core.invariant name="3" org.eventb.core.label="inv2" org.eventb.core.predicate="b ∈ ℕ"/>
+    <org.eventb.core.invariant name="4" org.eventb.core.label="inv3" org.eventb.core.predicate="c ∈ ℕ"/>
+    <org.eventb.core.invariant name="5" org.eventb.core.comment="Gluing invariant" org.eventb.core.label="inv4" org.eventb.core.predicate="n = a + b +c "/>
+    <org.eventb.core.invariant name="6" org.eventb.core.comment="We cannot have cars on both directions" org.eventb.core.label="inv5" org.eventb.core.predicate="a = 0 ∨ c = 0"/>
+    <org.eventb.core.event name="7" org.eventb.core.comment="Leave bridge , enter island." org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="IL_in">
+        <org.eventb.core.guard name="'" org.eventb.core.comment="There is a car in the bridge." org.eventb.core.label="grd1" org.eventb.core.predicate="0 &lt; a"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="a ≔ a − 1" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="b ≔ b + 1" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="8" org.eventb.core.comment="We leave the island and enter the bridge." org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="IL_out">
+        <org.eventb.core.guard name="'" org.eventb.core.comment="There is a car in the island" org.eventb.core.label="grd1" org.eventb.core.predicate="0 &lt; b"/>
+        <org.eventb.core.guard name="(" org.eventb.core.comment="There are no cars coming towards us" org.eventb.core.label="grd2" org.eventb.core.predicate="a = 0"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="c ≔ c + 1" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="b ≔ b − 1" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variant name="9" org.eventb.core.comment="One of the possible variants. " org.eventb.core.expression="2 ∗ a + b" org.eventb.core.label="vrn1"/>
+    <org.eventb.core.invariant name=":" org.eventb.core.comment="Absence of deadlock" org.eventb.core.label="inv6" org.eventb.core.predicate="(a + b &lt; d ∧ c = 0) ∨ c &gt; 0 ∨ 0 &lt; a ∨ (0 &lt; b ∧ a = 0)" org.eventb.core.theorem="true"/>
+    <org.eventb.core.variant name=";" org.eventb.core.comment="This is another possibility (there are infinite possibilities). -- a − c + d" org.eventb.core.expression="0" org.eventb.core.label="vrn2"/>
+</org.eventb.core.machineFile>

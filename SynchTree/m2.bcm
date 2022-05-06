@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+    <org.eventb.core.scRefinesMachine name="'" org.eventb.core.scTarget="/SynchTree/m1.bcm" org.eventb.core.source="/SynchTree/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.refinesMachine#'"/>
+    <org.eventb.core.scSeesContext name="(" org.eventb.core.scTarget="/SynchTree/c1.bcc" org.eventb.core.source="/SynchTree/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.seesContext#("/>
+    <org.eventb.core.scInternalContext name="c0">
+        <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="finite(P)" org.eventb.core.source="/SynchTree/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scCarrierSet name="P" org.eventb.core.source="/SynchTree/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(P)"/>
+    </org.eventb.core.scInternalContext>
+    <org.eventb.core.scInternalContext name="c1">
+        <org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/SynchTree/c0.bcc|org.eventb.core.scContextFile#c0" org.eventb.core.source="/SynchTree/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.extendsContext#'"/>
+        <org.eventb.core.scAxiom name="c1" org.eventb.core.label="axm1" org.eventb.core.predicate="r∈P" org.eventb.core.source="/SynchTree/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="c2" org.eventb.core.label="axm2" org.eventb.core.predicate="L⊆P" org.eventb.core.source="/SynchTree/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="c3" org.eventb.core.label="axm3" org.eventb.core.predicate="f∈P ∖ {r} ↠ P ∖ L" org.eventb.core.source="/SynchTree/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#," org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="c4" org.eventb.core.label="axm4" org.eventb.core.predicate="∀S⦂ℙ(P)·S⊆f∼[S]⇒S=(∅ ⦂ ℙ(P))" org.eventb.core.source="/SynchTree/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#-" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="c5" org.eventb.core.label="axm5" org.eventb.core.predicate="∀S⦂ℙ(P)·S⊆P∧r∈S∧(∀n⦂P·n∈P ∖ {r}∧f(n)∈S⇒n∈S)⇒P⊆S" org.eventb.core.source="/SynchTree/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#\/" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scConstant name="L" org.eventb.core.source="/SynchTree/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.constant#." org.eventb.core.type="ℙ(P)"/>
+        <org.eventb.core.scConstant name="f" org.eventb.core.source="/SynchTree/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.constant#*" org.eventb.core.type="ℙ(P×P)"/>
+        <org.eventb.core.scConstant name="r" org.eventb.core.source="/SynchTree/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.constant#(" org.eventb.core.type="P"/>
+    </org.eventb.core.scInternalContext>
+    <org.eventb.core.scInvariant name="c1" org.eventb.core.label="inv1" org.eventb.core.predicate="c∈P → ℕ" org.eventb.core.source="/SynchTree/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#*" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scInvariant name="c2" org.eventb.core.label="inv2" org.eventb.core.predicate="∀x⦂P,y⦂P·x∈P∧y∈P⇒c(x)≤c(y)+1" org.eventb.core.source="/SynchTree/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#+" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scInvariant name="c3" org.eventb.core.label="inv2" org.eventb.core.predicate="∀m⦂P·m∈P ∖ {r}⇒c(f(m))≤c(m)" org.eventb.core.source="/SynchTree/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#-" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scInvariant name="c4" org.eventb.core.label="inv1" org.eventb.core.predicate="∀m⦂P·m∈P⇒c(r)≤c(m)" org.eventb.core.source="/SynchTree/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#," org.eventb.core.theorem="true"/>
+    <org.eventb.core.scInvariant name="c5" org.eventb.core.label="inv1" org.eventb.core.predicate="d∈P → ℕ" org.eventb.core.source="/SynchTree/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#-" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scInvariant name="c6" org.eventb.core.label="inv2" org.eventb.core.predicate="∀x⦂P,y⦂P·x∈P∧y∈P⇒d(x)≤d(y)+1" org.eventb.core.source="/SynchTree/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#." org.eventb.core.theorem="false"/>
+    <org.eventb.core.scVariable name="c" org.eventb.core.abstract="true" org.eventb.core.concrete="true" org.eventb.core.source="/SynchTree/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#)" org.eventb.core.type="ℙ(P×ℤ)"/>
+    <org.eventb.core.scVariable name="d" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/SynchTree/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.variable#," org.eventb.core.type="ℙ(P×ℤ)"/>
+    <org.eventb.core.scEvent name="c7" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/SynchTree/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#*">
+        <org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/SynchTree/m1.bcm|org.eventb.core.scMachineFile#m1|org.eventb.core.scEvent#c5" org.eventb.core.source="/SynchTree/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#*"/>
+        <org.eventb.core.scAction name="(" org.eventb.core.assignment="c ≔ P × {0}" org.eventb.core.label="act1" org.eventb.core.source="/SynchTree/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#*|org.eventb.core.action#'"/>
+        <org.eventb.core.scAction name=")" org.eventb.core.assignment="d ≔ P × {0}" org.eventb.core.label="act2" org.eventb.core.source="/SynchTree/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#*|org.eventb.core.action#("/>
+    </org.eventb.core.scEvent>
+    <org.eventb.core.scEvent name="c8" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ascending" org.eventb.core.source="/SynchTree/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#+">
+        <org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/SynchTree/m1.bcm|org.eventb.core.scMachineFile#m1|org.eventb.core.scEvent#c6" org.eventb.core.source="/SynchTree/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#+|org.eventb.core.refinesEvent#'"/>
+        <org.eventb.core.scGuard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="n∈P" org.eventb.core.source="/SynchTree/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#+|org.eventb.core.guard#(" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scGuard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="c(n)=c(r)" org.eventb.core.source="/SynchTree/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#+|org.eventb.core.guard#)" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scGuard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="∀m⦂P·m∈f∼[{n}]⇒c(n)≠c(m)" org.eventb.core.source="/SynchTree/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#+|org.eventb.core.guard#+" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAction name="o" org.eventb.core.assignment="c ≔ c{n ↦ c(n)+1}" org.eventb.core.label="act1" org.eventb.core.source="/SynchTree/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#+|org.eventb.core.action#*"/>
+        <org.eventb.core.scParameter name="n" org.eventb.core.source="/SynchTree/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#+|org.eventb.core.parameter#'" org.eventb.core.type="P"/>
+    </org.eventb.core.scEvent>
+    <org.eventb.core.scEvent name="c9" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="descending" org.eventb.core.source="/SynchTree/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#\/">
+        <org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="n∈P" org.eventb.core.source="/SynchTree/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#\/|org.eventb.core.guard#(" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="∀m⦂P·m∈P⇒d(n)≤d(m)" org.eventb.core.source="/SynchTree/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#\/|org.eventb.core.guard#)" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scParameter name="n" org.eventb.core.source="/SynchTree/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#\/|org.eventb.core.parameter#'" org.eventb.core.type="P"/>
+        <org.eventb.core.scAction name="o" org.eventb.core.assignment="d ≔ d{n ↦ d(n)+1}" org.eventb.core.label="act1" org.eventb.core.source="/SynchTree/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#\/|org.eventb.core.action#*"/>
+    </org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>
